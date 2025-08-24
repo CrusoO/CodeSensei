@@ -564,10 +564,10 @@ We welcome contributions! This project is designed to be:
 
 ## 🔗 Links
 
-- **Repository**: [GitHub](https://github.com/your-org/codevision-ai)
-- **Demo**: [Live Demo](https://codevision-ai-demo.vercel.app)
+- **Repository**: [GitHub](https://github.com/CrusoO/CodeSensei)
+- **Demo**: [Live Demo](https://codesensei-demo.vercel.app)
 - **API Docs**: `http://localhost:8000/docs` (after starting)
-- **Discord**: [Community Chat](https://discord.gg/codevision)
+- **Discord**: [Community Chat](https://discord.gg/codesensei)
 
 ---
 
