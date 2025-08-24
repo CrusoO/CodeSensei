@@ -1,0 +1,73 @@
+# Interactive Coding Engine - Development Environment
+# Easy setup for developers to test and integrate the engine
+
+version: '3.8'
+
+services:
+  # Backend API Service
+  api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - UVICORN_RELOAD=true
+    volumes:
+      - ./api:/app/api
+      - ./src:/app/src
+      - ./examples:/app/examples
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/coding/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional: Demo Frontend (for testing integration)
+  demo:
+    image: node:18-alpine
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    volumes:
+      - ./examples:/app/examples
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+      - ./public:/app/public
+    command: |
+      sh -c "
+        if [ ! -d node_modules ]; then
+          echo 'Installing dependencies...'
+          npm install
+        fi
+        echo 'Starting demo server...'
+        npm start || echo 'Demo server failed to start'
+      "
+    depends_on:
+      - api
+    profiles:
+      - demo
+    restart: unless-stopped
+
+  # Documentation Server (serves integration guides)
+  docs:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./docs:/usr/share/nginx/html
+      - ./README.md:/usr/share/nginx/html/index.md
+      - ./INTEGRATION_GUIDE.md:/usr/share/nginx/html/integration.md
+      - ./QUICK_START.md:/usr/share/nginx/html/quick-start.md
+    profiles:
+      - docs
+    restart: unless-stopped
+
+networks:
+  default:
+    name: interactive-coding-engine

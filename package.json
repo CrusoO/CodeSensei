@@ -1,0 +1,47 @@
+{
+  "name": "codesensei",
+  "version": "1.0.0",
+  "description": "AI-powered code analysis and educational video generator that transforms any application into an interactive coding education platform",
+  "author": "CodeSensei Team",
+  "license": "MIT",
+  "keywords": [
+    "education",
+    "coding",
+    "interactive",
+    "learning",
+    "code-analysis",
+    "react",
+    "javascript",
+    "programming",
+    "tutorial",
+    "video-generation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrusoO/CodeSensei.git"
+  },
+  "main": "src/engines/InteractiveCodingEngine.js",
+  "private": false,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.16"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "scripts": {
+    "build:engine": "node scripts/build-engine.js"
+  },
+
+  "files": [
+    "src/engines/",
+    "src/components/embeddable/",
+    "src/services/",
+    "api/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ]
+}
