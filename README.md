@@ -1,5 +1,5 @@
-# 🧠 CodeSensei
-### AI-Powered Code Analysis & Educational Video Generator
+# CodeSensei
+**AI-Powered Code Analysis & Educational Video Generator**
 
 Transform any application into an interactive coding education platform with real-time code analysis and AI-generated educational videos.
 
@@ -8,15 +8,15 @@ Transform any application into an interactive coding education platform with rea
 [![React](https://img.shields.io/badge/React-16.8+-blue.svg)](https://reactjs.org/)
 [![AI Video Generation](https://img.shields.io/badge/AI-Video%20Generation-brightgreen.svg)](https://github.com)
 
-## 🚀 What CodeSensei Does
+## What CodeSensei Does
 
-- **🔍 Real-time Code Analysis** - Instant pattern recognition for React, JavaScript, and more
-- **🎥 AI Video Generation** - Creates educational videos explaining code concepts automatically
-- **📚 Educational Explanations** - Human-readable explanations of programming concepts
-- **⚡ Lightning Fast** - Optimized for real-time performance (<100ms analysis)
-- **🔧 Universal Integration** - Works with React, Vue, Angular, vanilla JS, or any backend
+- **Real-time Code Analysis** - Instant pattern recognition for React, JavaScript, and more
+- **AI Video Generation** - Creates educational videos explaining code concepts automatically
+- **Educational Explanations** - Human-readable explanations of programming concepts
+- **Lightning Fast** - Optimized for real-time performance (<100ms analysis)
+- **Universal Integration** - Works with React, Vue, Angular, vanilla JS, or any backend
 
-## 📦 Quick Start
+## Quick Start
 
 ### Option 1: Test with Docker (Recommended)
 ```bash
@@ -36,7 +36,7 @@ src/services/CodingVideoGenerator.js
 src/components/embeddable/EmbeddableCodeEditor.js  # (React only)
 ```
 
-## 🛠️ Implementation Guide
+## Implementation Guide
 
 ### 1. Basic Code Analysis Engine
 
@@ -177,7 +177,7 @@ const analyzeCode = async (code) => {
 }
 ```
 
-## 🎥 Video Generation Features
+## Video Generation Features
 
 ### Supported Video Types
 
@@ -235,7 +235,7 @@ const customVideo = await generator.createVideo({
 });
 ```
 
-## 🔧 Configuration Options
+## Configuration Options
 
 ### Engine Configuration
 
@@ -310,7 +310,7 @@ const engine = InteractiveCodingEngine.create({
 />
 ```
 
-## 🎯 Use Cases & Examples
+## Use Cases & Examples
 
 ### 1. E-Learning Platform
 ```javascript
@@ -384,34 +384,34 @@ document.querySelectorAll('code.interactive').forEach(block => {
 });
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CodeSensei/
-├── 📁 Core Engine
+├── Core Engine
 │   ├── src/engines/InteractiveCodingEngine.js     # Main analysis engine
 │   ├── src/services/VideoGenerator.js             # HTML5 Canvas video creation
 │   └── src/services/CodingVideoGenerator.js       # AI-powered coding videos
 │
-├── 📁 React Components
+├── React Components
 │   └── src/components/embeddable/EmbeddableCodeEditor.js
 │
-├── 📁 API Backend
+├── API Backend
 │   └── api/interactive-coding.py                  # FastAPI endpoints
 │
-├── 📁 Examples & Integration
+├── Examples & Integration
 │   ├── examples/simple-integration.js             # Basic usage examples
 │   ├── examples/framework-examples.js             # Vue, Angular examples
 │   └── scripts/                                   # Build and deployment scripts
 │
-└── 📁 Configuration
+└── Configuration
     ├── package.json                               # Dependencies
     ├── requirements.txt                           # Python dependencies
     ├── docker-compose.yml                         # Container setup
     └── README.md                                  # This file
 ```
 
-## ⚡ Performance & Technical Details
+## Performance & Technical Details
 
 ### Analysis Performance
 - **Speed**: <100ms for typical code snippets
@@ -445,7 +445,7 @@ CodeSensei/
 'responsive-design'    // Media queries, flexbox, grid
 ```
 
-## 🔌 API Reference
+## API Reference
 
 ### REST API Endpoints
 
@@ -496,7 +496,7 @@ GET /api/coding/health
 Response: {"status": "healthy", "version": "1.0.0"}
 ```
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### Docker Deployment
 ```bash
@@ -526,7 +526,7 @@ export default async function handler(req, res) {
 ### CDN Distribution
 ```html
 <!-- Load from CDN -->
-<script src="https://cdn.codevision.ai/v1/codevision.min.js"></script>
+<script src="https://cdn.codesensei.ai/v1/codesensei.min.js"></script>
 <script>
   const engine = CodeSensei.create({
     apiKey: 'your-api-key'
@@ -534,7 +534,7 @@ export default async function handler(req, res) {
 </script>
 ```
 
-## 🎓 Educational Use Cases
+## Educational Use Cases
 
 ### Coding Bootcamps
 - Real-time feedback for students
@@ -551,18 +551,18 @@ export default async function handler(req, res) {
 - Contributor onboarding
 - Code quality education
 
-## 📄 License
+## License
 
 MIT License - Use freely in commercial and open-source projects.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! This project is designed to be:
 - **Modular**: Easy to extend with new languages/features
 - **Well-documented**: Comprehensive inline documentation
 - **Production-ready**: Enterprise-grade code quality
 
-## 🔗 Links
+## Links
 
 - **Repository**: [GitHub](https://github.com/CrusoO/CodeSensei)
 - **Demo**: [Live Demo](https://codesensei-demo.vercel.app)
